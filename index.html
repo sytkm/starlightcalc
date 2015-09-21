@@ -1,26 +1,56 @@
 <!DOCTYPE html>
 <html lang="ja">
-<head>
-	<meta charset="UTF-8">
-	<title>アイドルマスタースターライトステージ 経験値計算</title>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-	<script src="main.js"></script>
-</head>
-<body>
-	<input type="number" id="level" value=1><div id="calc">計算</div>
-	<table>
-		<tr>
-			<th>経験値:</th>
-			<td id="resexp"></td>
-		</tr>
-		<tr>
-			<th>スタミナ:</th>
-			<td id="resstam"></td>
-		</tr>
-		<tr>
-			<th>同僚:</th>
-			<td id="rescoll"></td>
-		</tr>
-	</table>
-</body>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="initial-scale=1.0">
+		<title>アイドルマスタースターライトステージ 経験値計算</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+		<script src="main.js"></script>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+		<link rel="stylesheet" href="main.css">
+	</head>
+	<body>
+		<h1>経験値計算</h1>
+
+		<form class="form-horizontal">
+			<div class="form-group">
+				<label for="level" class="col-sm-2 control-label">現在のレベル</label>
+				<div class="col-sm-8">
+					<input type="number" id="level" class="form-control" placeholder="レベル">
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="nowexp" class="col-sm-2 control-label">現在の経験値</label>
+				<div class="col-sm-8">
+					<input type="number" id="nowexp" class="form-control" placeholder="経験値">
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="nowstam" class="col-sm-2 control-label">現在のスタミナ</label>
+				<div class="col-sm-8">
+					<input type="number" id="nowstam" class="form-control" placeholder="スタミナ">
+				</div>
+			</div>
+
+			<div class="form-group">
+				<div class="col-sm-offset-2 col-sm-6">
+					<button type="button" id="calc" class="btn btn-default">計算</button>
+				</div>
+			</div>
+		</form>
+		<table>
+			<tr>
+				<th>経験値:</th>
+				<td id="resexp">0</td>
+			</tr>
+			<tr>
+				<th>スタミナ:</th>
+				<td id="resstam">0</td>
+			</tr>
+			<tr>
+				<th>同僚:</th>
+				<td id="rescoll">0</td>
+			</tr>
+		</table>
+	</body>
 </html>
